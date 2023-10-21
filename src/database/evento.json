@@ -1,0 +1,128 @@
+[
+    {
+        "nome": "Tech Hoje!",
+        "descrição": "Evento regional de tecnologia onde se discute as tecnologias atuais com vários entusiastas da área",
+        "período": "dia 22/02 até 25/02",
+        "local": "praça de eventos João Pessoa",
+        "tema": "Tecnologia",
+        "programação": [
+            "Palestras",
+            "Workshops",
+            "feira de tecnologia"
+        ],
+        "foto": "",
+        "comitê": "Federação TecnoMais",
+        "sítio do evento": "João Pessoa",
+        "sessões técnicas": {
+            "Apresentação via vídeo": false,
+            "Apresentação presencial": true,
+            "Apresentações Híbridas": true
+        },
+        "preco": 130
+    },
+    {
+        "nome": "TechTudo",
+        "descrição": "O TechTudo é uma feira de exposição para atrair pessoas para a área empolgante da tecnologia!",
+        "período": "dia 12/05 até 14/05",
+        "local": "Imperial Recepções",
+        "tema": "Tecnologia",
+        "programação": [
+            "Apresentações",
+            "Workshops"
+        ],
+        "foto": "",
+        "comitê": "Paraíba Educa",
+        "sítio do evento": "Cajazeiras",
+        "sessões técnicas": {
+            "Apresentação via vídeo": false,
+            "Apresentação presencial": true,
+            "Apresentações Híbridas": false
+        },
+        "preco": 30
+    },
+    {
+        "nome": "Programa Mais",
+        "descrição": "Evento Nacional que acontece no Brasil, trazendo novidades internacionais do mundo da tecnologia!",
+        "período": "dia 28/010 até 29/10",
+        "local": "PUC-SP",
+        "tema": "Tecnologia",
+        "programação": [
+            "Palestras",
+            "Workshops",
+            "feira de tecnologia",
+            "Apresentação de projetos"
+        ],
+        "foto": "",
+        "comitê": "Congresso Brasileiro de Computação",
+        "sítio do evento": "São Paulo",
+        "sessões técnicas": {
+            "Apresentação via vídeo": true,
+            "Apresentação presencial": true,
+            "Apresentações Híbridas": true
+        },
+        "preco": 110
+    },
+    {
+        "nome": "Campus DEV",
+        "descrição": "Gosta de Tecnologia? O Campus DEV é um intensivão de tecnologias para a carreira dev, participe agora!!",
+        "período": "dia 02/06 até 04/06",
+        "local": "IFPB - João Pessoa",
+        "tema": "Tecnologia",
+        "programação": [
+            "Workshops",
+            "Aulas",
+            "Atividades"
+        ],
+        "foto": "",
+        "comitê": "IFPB",
+        "sítio do evento": "João Pessoa",
+        "sessões técnicas": {
+            "Apresentação via vídeo": false,
+            "Apresentação presencial": true,
+            "Apresentações Híbridas": false
+        },
+        "preco": 55
+    },
+    {
+        "nome": "Carreira Tech",
+        "descrição": "Evento online para a formação de desenvolvedores, voltado para construção de uma boa carreira na área da tecnologia.",
+        "período": "dia 24/03 até 25/03",
+        "local": "Online",
+        "tema": "Tecnologia e Carreira",
+        "programação": [
+            "Palestras",
+            "Apresentações",
+            "Aulas"
+        ],
+        "foto": "",
+        "comitê": "Movimento MEJ",
+        "sítio do evento": "Online",
+        "sessões técnicas": {
+            "Apresentação via vídeo": true,
+            "Apresentação presencial": false,
+            "Apresentações Híbridas": false
+        },
+        "preco": 15
+    },
+    {
+        "nome": "Tico e Tech",
+        "descrição": "Para todos da área da tecnologia que gostam de um debate sobre o futuro da tecnologia o Tico e Tech é para você!",
+        "período": "dia 07/04 até 08/04",
+        "local": "Online",
+        "tema": "Tecnologia",
+        "programação": [
+            "Palestras",
+            "apresentações",
+            "debate"
+        ],
+        "foto": "",
+        "comitê": "ExpoTech",
+        "sítio do evento": "Online",
+        "sessões técnicas": {
+            "Apresentação via vídeo": true,
+            "Apresentação presencial": false,
+            "Apresentações Híbridas": false
+        },
+        "preco": 25
+    }
+]
