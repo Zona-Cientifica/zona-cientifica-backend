@@ -1,18 +1,13 @@
-const Event = require('../database/evento')
+const Event = require("../models/Event");
 
-const objects = [
-    Event.map()
-];
+async function findEvents(req, res) {
+  let events = await Event.find().lean()
+    .then((event) => {
+      res.status(200).json(event);
+    })
+    .catch((err) => {
+      res.status(400).json({ message: "Erro na busca: " + err });
+    });
+}
 
-array.forEach(obj => {
-        Event.filter(nome)
-});
-
-function findEvent() {
-    return objects.filter(Event.nome);
-};
-
-
-
-
-module.exports = findEvent;
+module.exports = { findEvents };
