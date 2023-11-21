@@ -9,6 +9,8 @@ const confirmEdit = require("../controller/users/edit_perfil");
 const purchaseHistoric = require('../controller/users/purchaseHistoric');
 const cardRegister = require('../controller/cardRegister');
 const favoriteList = require('../controller/users/favoriteList');
+const findEvent = require('../../src/controller/findEvent');
+const registerEvent = require("../controller/registerEvent");
 
 router.post("/auth/login", login);
 
@@ -17,6 +19,10 @@ router.post("/auth/register", register);
 router.post("/auth/forgot_password", forgot_password);
 
 router.post('/perfil', confirmEdit);
+
+router.get('/events', findEvent.findEvents);
+
+router.post('/event', registerEvent);
 
 router.post('/auth/buyEvent', purchaseHistoric.buyEvent);
 
