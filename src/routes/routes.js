@@ -12,11 +12,11 @@ const favoriteList = require('../controller/users/favoriteList');
 const findEvent = require('../../src/controller/findEvent');
 const registerEvent = require("../controller/registerEvent");
 
-router.post("/auth/login", login);
+router.post("/login", login);
 
-router.post("/auth/register", register);
+router.post("/register", register);
 
-router.post("/auth/forgot_password", forgot_password);
+router.post("/forgot_password", forgot_password);
 
 router.post('/perfil', confirmEdit);
 
@@ -24,9 +24,9 @@ router.get('/events', findEvent.findEvents);
 
 router.post('/event', registerEvent);
 
-router.post('/auth/buyEvent', purchaseHistoric.buyEvent);
+router.post('/buyEvent', purchaseHistoric.buyEvent);
 
-router.post('/auth/getPurchaseHistoric', purchaseHistoric.getPurchaseHistoric);
+router.post('/getPurchaseHistoric', purchaseHistoric.getPurchaseHistoric);
 
 router.post('/cardregister', cardRegister);
 
@@ -34,7 +34,7 @@ router.post('/addFavorite', favoriteList.addFavorite);
 
 router.post('/getFavoriteList', favoriteList.getFavoriteList);
 
-router.post('/auth/posts', multer(multerConfig).single('file'), async (req, res) =>{
+router.post('/posts', multer(multerConfig).single('file'), async (req, res) =>{
     const post = await Post.create({
         name: req.file.originalname,
         size: req.file.size,
