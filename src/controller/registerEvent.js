@@ -1,7 +1,7 @@
 const Event = require("../models/Event");
 
 async function registerEvent(req, res) {
-  const { title, picture, description, date } = req.body;
+  const { title, picture, description, date, theme } = req.body;
 
   // check if user exists
   const eventExists = await Event.findOne({ title: title });
@@ -15,6 +15,7 @@ async function registerEvent(req, res) {
     picture,
     description,
     date,
+    theme
   });
 
   try {

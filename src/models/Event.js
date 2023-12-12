@@ -5,6 +5,7 @@ const Event = mongoose.model("Event", {
   picture: String,
   description: String,
   date: String,
+  theme: String
 });
 
 module.exports = Event;
