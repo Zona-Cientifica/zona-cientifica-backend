@@ -12,6 +12,20 @@ const favoriteList = require("../controller/users/favoriteList");
 const findEvent = require("../../src/controller/findEvent");
 const registerEvent = require("../controller/registerEvent");
 const getUser = require("../controller/users/getUser");
+const path = require("path");
+
+const storage = multer.diskStorage({
+  destination: (req, file, callback) => {
+    callback(null, path.resolve(__dirname, '..','..','tmp','uploads'))
+  },
+  filename: (req, file, callback) => {
+    callback(null, file.fieldname + "_" + Date.now() + path.extname(file.originalname))
+  }
+})
+
+const upload = multer({
+  storage: storage
+})
 
 router.post("/login", login);
 
@@ -25,7 +39,7 @@ router.post("/perfil", confirmEdit);
 
 router.get("/events", findEvent.findEvents);
 
-router.post("/event", registerEvent);
+router.post("/event", upload.single("picture"), registerEvent);
 
 router.post("/buyEvent", purchaseHistoric.buyEvent);
 

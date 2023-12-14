@@ -1,7 +1,8 @@
 const Event = require("../models/Event");
 
 async function registerEvent(req, res) {
-  const { title, picture, description, date, theme } = req.body;
+  const { title, description, date, theme, latitude, longitude } = req.body;
+  const picture = req.file?.filename;
 
   // check if user exists
   const eventExists = await Event.findOne({ title: title });
@@ -9,13 +10,18 @@ async function registerEvent(req, res) {
     return res.status(422).json({ msg: "Evento já existe!" });
   }
 
+  const local = {
+    latitude: latitude,
+    longitude: longitude
+  }
   // create user
   const event = new Event({
     title,
     picture,
     description,
     date,
-    theme
+    theme,
+    local
   });
 
   try {

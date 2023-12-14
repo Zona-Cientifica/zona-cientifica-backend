@@ -7,12 +7,12 @@ const port = 3000;
 const app = express();
 connectdb();
 
+app.use(express.static("tmp"))
 app.use(
   express.urlencoded({
     extended: true,
   })
 );
-
 // models
 const User = require("./src/models/User");
 
