@@ -11,7 +11,7 @@ async function getUser(req, res) {
   }
 
   // check if user exists
-  const user = await User.findOne({ where: { email: email } });
+  const user = await User.findOne({ email: email });
 
   if (!user) {
     return res.status(404).json({ msg: "Usuário não encontrado!" });
