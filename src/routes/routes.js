@@ -11,8 +11,11 @@ const cardRegister = require("../controller/cardRegister");
 const favoriteList = require("../controller/users/favoriteList");
 const findEvent = require("../../src/controller/findEvent");
 const registerEvent = require("../controller/registerEvent");
+const getUser = require("../controller/users/getUser");
 
 router.post("/login", login);
+
+router.post("/getUser", getUser);
 
 router.post("/register", register);
 

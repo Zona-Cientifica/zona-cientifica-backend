@@ -2,7 +2,7 @@ const User = require("../../models/User");
 
 async function addFavorite(req, res) {
   User.findOne({ email: req.body.email }).then((user) => {
-    user.favoriteList.push(req.body.eventName);
+    user.favoriteList.push(req.body.id);
 
     user
       .save()
@@ -30,7 +30,7 @@ async function getFavoriteList(req, res) {
 
 async function deleteFavorite(req, res) {
   User.findOne({ email: req.body.email }).then((user) => {
-    let index = user.favoriteList.indexOf(req.body.eventName);
+    let index = user.favoriteList.indexOf(req.body.id);
     if (index > -1) {
       user.favoriteList.splice(index, 1);
     }
