@@ -1,9 +1,9 @@
 const User = require("../../models/User");
 
 async function addParticipating(req, res) {
-  const { id, title, picture, description, date } = req.body;
+  const { _id, title, picture, description, date } = req.body;
   User.findOne({ email: req.body.email }).then((user) => {
-    user.participatingList.push({ id, title, picture, description, date });
+    user.participatingList.push({ _id, title, picture, description, date });
 
     user
       .save()
