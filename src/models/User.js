@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 
 const User = mongoose.model('User', {
   name: String,
-  apelido: String,
+  userName: String,
   email: String,
-  telefone: String,
+  phone: String,
   password: String,
   passwordResetToken: String,
   purchaseHistoric: Array,
