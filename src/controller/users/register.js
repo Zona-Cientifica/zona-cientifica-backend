@@ -3,7 +3,7 @@ const User = require("../../models/User");
 
 
 async function register(req, res) {
-    const { name, email, password, telefone, apelido, favoriteList, participatingList} = req.body;
+    const { name, userName, email, password, phone, apelido, favoriteList, participatingList} = req.body;
   
     // validations
     if (!name) {
@@ -32,8 +32,9 @@ async function register(req, res) {
     // create user
     const user = new User({
       name,
+      userName,
       email,
-      telefone,
+      phone,
       apelido,
       password: passwordHash,
       favoriteList,
