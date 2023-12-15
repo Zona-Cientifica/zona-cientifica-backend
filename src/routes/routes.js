@@ -9,6 +9,7 @@ const confirmEdit = require("../controller/users/edit_perfil");
 const purchaseHistoric = require("../controller/users/purchaseHistoric");
 const cardRegister = require("../controller/cardRegister");
 const favoriteList = require("../controller/users/favoriteList");
+const participatingList = require("../controller/users/participatingList");
 const findEvent = require("../../src/controller/findEvent");
 const registerEvent = require("../controller/registerEvent");
 const getUser = require("../controller/users/getUser");
@@ -55,6 +56,12 @@ router.post("/addFavorite", favoriteList.addFavorite);
 router.post("/getFavoriteList", favoriteList.getFavoriteList);
 
 router.post("/deleteFavorite", favoriteList.deleteFavorite);
+
+router.post("/addParticipating", participatingList.addParticipating);
+
+router.post("/getParticipatingList", participatingList.getParticipatingList);
+
+router.post("/deleteParticipating", participatingList.deleteParticipating);
 
 router.post("/posts", multer(multerConfig).single("file"), async (req, res) => {
   const post = await Post.create({
