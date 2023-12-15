@@ -1,8 +1,10 @@
 const User = require("../../models/User");
+const Event = require("../../models/Event");
 
 async function addFavorite(req, res) {
+  const { id, title, picture, description, date } = req.body;
   User.findOne({ email: req.body.email }).then((user) => {
-    user.favoriteList.push(req.body.id);
+    user.favoriteList.push({ id, title, picture, description, date });
 
     user
       .save()
@@ -30,10 +32,12 @@ async function getFavoriteList(req, res) {
 
 async function deleteFavorite(req, res) {
   User.findOne({ email: req.body.email }).then((user) => {
-    let index = user.favoriteList.indexOf(req.body.id);
-    if (index > -1) {
-      user.favoriteList.splice(index, 1);
-    }
+    const newList = user.favoriteList.filter((favorite) => {
+      if (favorite.id !== req.body.id) {
+        return favorite;
+      }
+    });
+    user.favoriteList = newList;
     user
       .save()
       .then(() => {

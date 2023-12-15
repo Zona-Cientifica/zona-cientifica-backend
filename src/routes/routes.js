@@ -16,16 +16,19 @@ const path = require("path");
 
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
-    callback(null, path.resolve(__dirname, '..','..','tmp','uploads'))
+    callback(null, path.resolve(__dirname, "..", "..", "tmp", "uploads"));
   },
   filename: (req, file, callback) => {
-    callback(null, file.fieldname + "_" + Date.now() + path.extname(file.originalname))
-  }
-})
+    callback(
+      null,
+      file.fieldname + "_" + Date.now() + path.extname(file.originalname)
+    );
+  },
+});
 
 const upload = multer({
-  storage: storage
-})
+  storage: storage,
+});
 
 router.post("/login", login);
 
