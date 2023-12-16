@@ -2,9 +2,9 @@ const User = require("../../models/User");
 const Event = require("../../models/Event");
 
 async function addFavorite(req, res) {
-  const { id, title, picture, description, date } = req.body;
+  const { id, title, picture, description, date, location } = req.body;
   User.findOne({ email: req.body.email }).then((user) => {
-    user.favoriteList.push({ id, title, picture, description, date });
+    user.favoriteList.push({ id, title, picture, description, date, location });
 
     user
       .save()
