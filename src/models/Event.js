@@ -6,7 +6,8 @@ const Event = mongoose.model("Event", {
   description: String,
   date: String,
   theme: String,
-  local: Object
+  location: String,
+  coordinates: Object,
 });
 
 module.exports = Event;
