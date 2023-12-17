@@ -7,6 +7,7 @@ const User = mongoose.model('User', {
   phone: String,
   picture: String,
   password: String,
+  picture: String,
   passwordResetToken: String,
   purchaseHistoric: Array,
   participatingList: Array,
